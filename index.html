@@ -3,118 +3,91 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Lin Shi is a sustainability scientist working across responsible AI, digital systems, life cycle assessment, and technology supply chains." />
+  <meta name="description" content="Lin Shi is a sustainability scientist working on responsible AI, life cycle assessment, and technology supply chains." />
   <meta name="theme-color" content="#5daa62" />
-  <meta property="og:title" content="Lin Shi | Sustainability Scientist" />
-  <meta property="og:description" content="Research at the intersection of sustainability science, responsible AI, and digital systems." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/headshot.jpg" />
   <title>Lin Shi | Sustainability Scientist</title>
   <style>
     :root{
       --green:#5daa62;
-      --green-dark:#1c442d;
-      --green-pale:#e7f2e7;
-      --ink:#171b18;
-      --muted:#657069;
-      --paper:#fbfcfa;
-      --line:#dde4dd;
-      --night:#101713;
-      --max:1240px;
+      --ink:#202421;
+      --muted:#68706a;
+      --paper:#ffffff;
+      --soft:#f4f7f3;
+      --line:#dfe5df;
+      --max:1120px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;background:var(--paper);color:var(--ink);font-family:"Avenir Next",Avenir,"Helvetica Neue",Arial,sans-serif;line-height:1.65}
     a{color:inherit}
-    .shell{width:min(calc(100% - 52px),var(--max));margin:auto}
-    .topbar{position:sticky;top:0;z-index:50;background:rgba(93,170,98,.96);color:#fff;backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(0,0,0,.04)}
-    .topbar:before{content:"";position:absolute;left:0;top:0;border-top:42px solid var(--paper);border-right:42px solid transparent;width:0;height:0}
-    .nav{height:94px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-    .brand{font-size:clamp(1.2rem,2vw,1.85rem);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;font-weight:500;white-space:nowrap}
-    .navlinks{display:flex;gap:38px;align-items:center}
-    .navlinks a{text-decoration:none;text-transform:uppercase;letter-spacing:.19em;font-size:.78rem;font-weight:700;opacity:.92}
-    .navlinks a:hover{opacity:.55}
+    .shell{width:min(calc(100% - 40px),var(--max));margin:auto}
 
-    .hero{min-height:720px;display:grid;align-items:center;position:relative;overflow:hidden}
-    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(93,170,98,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(93,170,98,.06) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,black,transparent 82%)}
-    .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:78px;align-items:center;padding:98px 0 86px}
-    .kicker{text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;font-weight:800;color:var(--green-dark)}
+    header{background:var(--green);color:#fff}
+    .nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{font-size:1.55rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+    nav{display:flex;gap:30px}
+    nav a{text-decoration:none;text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:700}
+
+    section{padding:88px 0}
+    .hero{padding:110px 0 96px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:72px;align-items:center}
+    .eyebrow,.label{text-transform:uppercase;letter-spacing:.18em;font-size:.73rem;font-weight:800;color:#356c3b}
     h1,h2,h3,p{margin-top:0}
-    h1{font-weight:400;font-size:clamp(3.5rem,7.5vw,7rem);line-height:.98;letter-spacing:-.045em;margin:16px 0 26px;max-width:850px}
-    .hero-copy{font-size:clamp(1.1rem,1.7vw,1.45rem);color:#3f4943;max-width:760px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
-    .button{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--green-dark);padding:12px 18px;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:800}
-    .button.primary{background:var(--green-dark);color:#fff}
-    .button:hover{transform:translateY(-2px)}
-    .portrait-wrap{position:relative;max-width:470px;margin-left:auto}
-    .portrait-wrap:before{content:"";position:absolute;inset:-22px 28px 26px -24px;border:1px solid var(--green);z-index:0}
-    .portrait{position:relative;z-index:1;width:100%;aspect-ratio:1/1;object-fit:cover;filter:saturate(.88) contrast(1.02);display:block}
-    .signal{position:absolute;right:-18px;bottom:-35px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at center,var(--green) 0 4px,transparent 5px),repeating-radial-gradient(circle at center,transparent 0 17px,rgba(93,170,98,.45) 18px 19px);z-index:2}
+    h1{font-size:clamp(3.2rem,7vw,6.3rem);font-weight:400;line-height:1;letter-spacing:-.045em;margin:18px 0 26px}
+    h2{font-size:clamp(2.1rem,4.5vw,3.8rem);font-weight:400;line-height:1.1;letter-spacing:-.035em;margin:12px 0 18px}
+    h3{font-size:1.25rem;line-height:1.3;margin-bottom:10px}
+    .lead{font-size:1.25rem;color:#49514b;max-width:760px}
+    .portrait{width:100%;max-width:390px;aspect-ratio:1/1;object-fit:cover;display:block;margin-left:auto}
+    .links{display:flex;flex-wrap:wrap;gap:18px;margin-top:30px}
+    .links a{text-decoration:none;border-bottom:1px solid var(--green);padding-bottom:3px;font-size:.86rem;font-weight:700}
 
-    section{padding:104px 0;border-top:1px solid var(--line)}
-    .section-title{display:grid;grid-template-columns:.46fr 1fr;gap:60px;align-items:start;margin-bottom:58px}
-    .section-title .label{text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:800;color:var(--green-dark)}
-    h2{font-size:clamp(2.2rem,4.8vw,4.5rem);font-weight:400;line-height:1.08;letter-spacing:-.04em;margin-bottom:18px}
-    .intro{font-size:1.14rem;color:var(--muted);max-width:760px}
+    .section-head{display:grid;grid-template-columns:180px 1fr;gap:40px;margin-bottom:48px}
+    .intro{font-size:1.12rem;color:var(--muted);max-width:780px}
 
-    .research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .research-card{border-top:2px solid var(--green);padding:24px 4px 8px;min-height:270px;position:relative}
-    .research-card .num{font-size:.75rem;letter-spacing:.16em;color:var(--green-dark);font-weight:800}
-    .research-card h3{font-size:1.45rem;font-weight:500;line-height:1.25;margin:42px 0 14px}
-    .research-card p{color:var(--muted)}
+    .research{background:var(--soft)}
+    .research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+    .research-card{border-top:2px solid var(--green);padding-top:20px}
+    .research-card p{color:var(--muted);margin-bottom:0}
 
-    .dark{background:var(--night);color:#f4f7f4;border-top:0;position:relative;overflow:hidden}
-    .dark:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-160px;top:-160px;background:radial-gradient(circle,rgba(93,170,98,.28),transparent 68%)}
-    .dark .label,.dark .kicker{color:#9fd5a3}
-    .dark .intro{color:#b5c0b9}
-    .work-list{position:relative;z-index:1}
-    .work-item{display:grid;grid-template-columns:120px 1fr auto;gap:34px;align-items:start;padding:34px 0;border-top:1px solid rgba(255,255,255,.16)}
-    .work-item:last-child{border-bottom:1px solid rgba(255,255,255,.16)}
-    .year{font-size:.8rem;letter-spacing:.18em;color:#9fd5a3;font-weight:800}
-    .work-item h3{font-size:clamp(1.35rem,2.2vw,2rem);font-weight:450;line-height:1.22;margin-bottom:10px}
-    .work-item p{color:#aeb9b2;max-width:820px;margin-bottom:0}
-    .work-link{text-decoration:none;border-bottom:1px solid #9fd5a3;color:#dff1e0;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;white-space:nowrap;padding-bottom:5px}
+    .work-list{border-top:1px solid var(--line)}
+    .work-item{display:grid;grid-template-columns:90px 1fr auto;gap:28px;padding:28px 0;border-bottom:1px solid var(--line);align-items:start}
+    .year{color:#356c3b;font-size:.78rem;font-weight:800;letter-spacing:.14em}
+    .work-item p{color:var(--muted);margin-bottom:0}
+    .work-item a{text-decoration:none;white-space:nowrap;border-bottom:1px solid var(--green);font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em}
 
-    .systems{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-    .diagram{min-height:420px;position:relative;border:1px solid var(--line);background:#fff;overflow:hidden}
-    .node{position:absolute;width:128px;height:128px;border:1px solid var(--green);border-radius:50%;display:grid;place-items:center;text-align:center;padding:18px;text-transform:uppercase;letter-spacing:.11em;font-size:.68rem;font-weight:800;background:#fff}
-    .node.a{left:7%;top:12%}.node.b{right:7%;top:12%}.node.c{left:50%;transform:translateX(-50%);bottom:9%}.node.core{left:50%;top:48%;transform:translate(-50%,-50%);background:var(--green);color:white;border-color:var(--green);width:150px;height:150px}
-    .line{position:absolute;height:1px;background:var(--green);transform-origin:left center}
-    .line.l1{left:25%;top:31%;width:30%;transform:rotate(22deg)}.line.l2{left:51%;top:48%;width:29%;transform:rotate(-22deg)}.line.l3{left:51%;top:53%;width:28%;transform:rotate(106deg)}
-    .systems-copy ul{list-style:none;padding:0;margin:30px 0 0}
-    .systems-copy li{padding:16px 0;border-top:1px solid var(--line);display:flex;gap:18px}
-    .systems-copy li span:first-child{color:var(--green-dark);font-weight:800;letter-spacing:.1em;font-size:.74rem}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+    .about-photo{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+    .about-copy{font-size:1.12rem}
+    .facts{margin-top:28px;border-top:1px solid var(--line)}
+    .fact{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:12px 0;border-bottom:1px solid var(--line)}
+    .fact strong{text-transform:uppercase;letter-spacing:.11em;font-size:.68rem;color:#356c3b}
 
-    .about-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:76px;align-items:start}
-    .about-photo{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;filter:grayscale(.08)}
-    .about-copy{font-size:1.16rem}
-    .facts{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;margin-top:34px;border-top:1px solid var(--line)}
-    .fact{padding:14px 0;border-bottom:1px solid var(--line)}
-    .fact strong{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:.69rem;color:var(--green-dark)}
+    .contact{background:var(--green);color:#fff;text-align:center;padding:70px 0}
+    .contact h2{max-width:800px;margin:0 auto 22px}
+    .contact a{font-weight:800}
 
-    .contact{background:var(--green);color:#fff;border-top:0}
-    .contact-inner{display:grid;grid-template-columns:1fr auto;gap:50px;align-items:end}
-    .contact h2{max-width:850px;margin-bottom:0}
-    .contact .button{border-color:#fff;color:#fff}
-
-    footer{padding:34px 0;color:var(--muted);font-size:.84rem}
+    footer{padding:28px 0;color:var(--muted);font-size:.82rem}
     .footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
 
-    @media(max-width:900px){
-      .nav{height:78px}.navlinks{display:none}.hero{min-height:auto}.hero-grid,.section-title,.systems,.about-grid,.contact-inner{grid-template-columns:1fr}.hero-grid{gap:56px;padding:72px 0}.portrait-wrap{margin:0;max-width:420px}.research-grid{grid-template-columns:1fr}.work-item{grid-template-columns:1fr;gap:12px}.systems{gap:42px}.about-photo{max-width:420px}.signal{display:none}
+    @media(max-width:820px){
+      nav{display:none}
+      .hero-grid,.section-head,.about-grid{grid-template-columns:1fr}
+      .hero-grid{gap:44px}
+      .portrait{margin:0;max-width:360px}
+      .research-grid{grid-template-columns:1fr}
+      .work-item{grid-template-columns:1fr;gap:10px}
+      section{padding:72px 0}
+      .hero{padding:78px 0}
     }
-    @media(max-width:560px){.shell{width:min(calc(100% - 30px),var(--max))}.brand{font-size:1.02rem}.topbar:before{border-top-width:26px;border-right-width:26px}.hero-grid{padding-top:58px}.diagram{min-height:350px}.node{width:102px;height:102px;font-size:.58rem}.node.core{width:122px;height:122px}.facts{grid-template-columns:1fr}section{padding:78px 0}}
   </style>
 </head>
 <body>
-  <header class="topbar">
+  <header>
     <div class="shell nav">
       <a class="brand" href="#top">Lin Shi | 石琳</a>
-      <nav class="navlinks" aria-label="Main navigation">
+      <nav aria-label="Main navigation">
         <a href="#research">Research</a>
-        <a href="#work">Selected work</a>
-        <a href="#systems">Systems</a>
+        <a href="#work">Work</a>
         <a href="#about">About</a>
       </nav>
     </div>
@@ -123,82 +96,109 @@
   <main id="top">
     <section class="hero">
       <div class="shell hero-grid">
-        <div class="reveal">
-          <div class="kicker">Sustainability scientist · responsible AI researcher</div>
-          <h1>Science for a digital world within planetary limits.</h1>
-          <p class="hero-copy">I study how technology is made, used, and governed—then build decision frameworks that help organizations reduce environmental impact without losing sight of people, systems, or uncertainty.</p>
-          <div class="actions">
-            <a class="button primary" href="#work">Explore recent research</a>
-            <a class="button" href="https://www.amazon.science/author/lin-shi" target="_blank" rel="noopener">Amazon Science ↗</a>
-            <a class="button" href="https://scholar.google.com/citations?user=h-xFztAAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <div>
+          <div class="eyebrow">Sustainability scientist</div>
+          <h1>Science for responsible technology.</h1>
+          <p class="lead">I study the environmental impacts of digital systems and develop practical methods for responsible AI, life cycle assessment, and low-carbon technology value chains.</p>
+          <div class="links">
+            <a href="#work">Recent research</a>
+            <a href="https://www.amazon.science/author/lin-shi" target="_blank" rel="noopener">Amazon Science ↗</a>
+            <a href="https://scholar.google.com/citations?user=h-xFztAAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
           </div>
         </div>
-        <div class="portrait-wrap reveal">
-          <img class="portrait" src="assets/headshot.jpg" alt="Portrait of Lin Shi" />
-          <div class="signal" aria-hidden="true"></div>
-        </div>
+        <img class="portrait" src="assets/headshot.jpg" alt="Portrait of Lin Shi" />
       </div>
     </section>
 
-    <section id="research">
+    <section class="research" id="research">
       <div class="shell">
-        <div class="section-title reveal">
-          <div class="label">Research agenda</div>
-          <div><h2>Connecting environmental science with the frontier of technology.</h2><p class="intro">My research moves between product-level measurement, global value chains, digital behavior, and AI governance. The common thread is decision-making under complex system constraints.</p></div>
+        <div class="section-head">
+          <div class="label">Research</div>
+          <div>
+            <h2>Connecting sustainability science with emerging technology.</h2>
+            <p class="intro">My work focuses on the decisions that shape the environmental footprint of AI, digital products, and global technology supply chains.</p>
+          </div>
         </div>
         <div class="research-grid">
-          <article class="research-card reveal"><div class="num">01 / RESPONSIBLE AI</div><h3>Risk-aware generative AI for sustainability</h3><p>Structured methods to identify, test, evaluate, and mitigate misinformation, data leakage, and other deployment risks in sustainability-focused AI systems.</p></article>
-          <article class="research-card reveal"><div class="num">02 / DIGITAL SYSTEMS</div><h3>Climate impacts beyond the device</h3><p>New ways to understand the emissions monitored, induced, or enabled by digital behavior—not only the embodied footprint of hardware.</p></article>
-          <article class="research-card reveal"><div class="num">03 / INDUSTRIAL ECOLOGY</div><h3>Low-carbon technology value chains</h3><p>Life cycle assessment and systems methods for electronics, semiconductors, circularity, product durability, and supply-chain decarbonization.</p></article>
+          <article class="research-card">
+            <h3>Responsible AI</h3>
+            <p>Methods to identify and mitigate risks in sustainability-focused generative AI systems.</p>
+          </article>
+          <article class="research-card">
+            <h3>Digital systems</h3>
+            <p>Frameworks for connecting digital behavior with infrastructure, resource use, and climate impacts.</p>
+          </article>
+          <article class="research-card">
+            <h3>Technology value chains</h3>
+            <p>Life cycle assessment for electronics, semiconductors, circularity, and supply-chain decarbonization.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="dark" id="work">
+    <section id="work">
       <div class="shell">
-        <div class="section-title reveal">
+        <div class="section-head">
           <div class="label">Selected work</div>
-          <div><h2>Recent research</h2><p class="intro">A selection of work spanning responsible AI, digital behavior, device circularity, and life cycle assessment.</p></div>
+          <div><h2>Recent research</h2></div>
         </div>
         <div class="work-list">
-          <article class="work-item reveal"><div class="year">2025</div><div><h3>Sustainability-focused generative AI risk mitigation strategies</h3><p>A systematic approach to risk identification, testing, evaluation, and mitigation for enterprise sustainability applications of generative AI.</p></div><a class="work-link" href="https://www.amazon.science/publications/sustainability-focused-generative-ai-risk-mitigation-strategies" target="_blank" rel="noopener">Read paper ↗</a></article>
-          <article class="work-item reveal"><div class="year">2024</div><div><h3>Climate impacts of digital use supply chains</h3><p>Introduces digital use supply chains as a framework for connecting moment-by-moment digital activity with production, resource use, and climate impacts.</p></div><a class="work-link" href="https://www.gsb.stanford.edu/faculty-research/publications/climate-impacts-digital-use-supply-chains" target="_blank" rel="noopener">View research ↗</a></article>
-          <article class="work-item reveal"><div class="year">2023</div><div><h3>Predicting cumulative device activity for circularity</h3><p>A methodology using device activity over time to improve estimates of utilization, circularity potential, and use-phase carbon footprint.</p></div><a class="work-link" href="https://www.amazon.science/author/lin-shi" target="_blank" rel="noopener">Amazon Science ↗</a></article>
-          <article class="work-item reveal"><div class="year">2022</div><div><h3>Functionality-based life cycle assessment of ICT products</h3><p>A user-oriented LCA framework that compares multifunctional technology products according to the services and functions people actually use.</p></div><a class="work-link" href="https://doi.org/10.1111/jiec.13240" target="_blank" rel="noopener">Read paper ↗</a></article>
+          <article class="work-item">
+            <div class="year">2025</div>
+            <div><h3>Sustainability-focused generative AI risk mitigation strategies</h3><p>A decision-oriented approach to testing, evaluating, and mitigating risks in enterprise sustainability applications.</p></div>
+            <a href="https://www.amazon.science/publications/sustainability-focused-generative-ai-risk-mitigation-strategies" target="_blank" rel="noopener">Read ↗</a>
+          </article>
+          <article class="work-item">
+            <div class="year">2024</div>
+            <div><h3>Climate impacts of digital use supply chains</h3><p>A framework connecting everyday digital activity with production systems, resource use, and emissions.</p></div>
+            <a href="https://www.gsb.stanford.edu/faculty-research/publications/climate-impacts-digital-use-supply-chains" target="_blank" rel="noopener">Read ↗</a>
+          </article>
+          <article class="work-item">
+            <div class="year">2022</div>
+            <div><h3>Functionality-based life cycle assessment of ICT products</h3><p>A user-centered method for comparing multifunctional technology products based on the services they provide.</p></div>
+            <a href="https://doi.org/10.1111/jiec.13240" target="_blank" rel="noopener">Read ↗</a>
+          </article>
         </div>
-      </div>
-    </section>
-
-    <section id="systems">
-      <div class="shell systems">
-        <div class="diagram reveal" aria-label="Diagram connecting AI, products, supply chains, and sustainability decisions">
-          <div class="node a">Products & materials</div><div class="node b">AI & digital behavior</div><div class="node c">Value chains & climate</div><div class="node core">Decision science</div>
-          <div class="line l1"></div><div class="line l2"></div><div class="line l3"></div>
-        </div>
-        <div class="systems-copy reveal"><div class="label">How I work</div><h2>From measurement to decisions.</h2><p class="intro">I combine industrial ecology, quantitative modeling, field knowledge, and responsible-innovation methods to turn fragmented evidence into actionable choices.</p><ul><li><span>01</span><div><strong>Measure</strong><br />Define the right system boundary and quantify impacts with transparent assumptions.</div></li><li><span>02</span><div><strong>Connect</strong><br />Trace relationships among products, users, infrastructure, suppliers, and policy.</div></li><li><span>03</span><div><strong>Decide</strong><br />Translate uncertainty into practical pathways, safeguards, and priorities.</div></li></ul></div>
       </div>
     </section>
 
     <section id="about">
       <div class="shell">
-        <div class="section-title reveal"><div class="label">About</div><div><h2>Scientist, systems thinker, and translator across disciplines.</h2></div></div>
+        <div class="section-head">
+          <div class="label">About</div>
+          <div><h2>Scientist and systems thinker.</h2></div>
+        </div>
         <div class="about-grid">
-          <img class="about-photo reveal" src="assets/headshot.jpg" alt="Lin Shi" />
-          <div class="about-copy reveal"><p>I am a senior sustainability scientist at Amazon Lab126, where I work on environmental challenges at the intersection of consumer technology, supply chains, life cycle assessment, and responsible AI.</p><p>I earned my PhD from Stanford’s Emmett Interdisciplinary Program in Environment and Resources. My earlier work spans environmental engineering, landscape ecology, conservation fieldwork, industrial ecology, and technology-sector sustainability.</p><p>I am most energized by research that is scientifically rigorous, useful in practice, and clear enough to change how decisions are made.</p><div class="facts"><div class="fact"><strong>Based in</strong>Vancouver, Canada</div><div class="fact"><strong>Methods</strong>LCA · systems modeling · risk analysis</div><div class="fact"><strong>Domains</strong>AI · semiconductors · consumer technology</div><div class="fact"><strong>Education</strong>Stanford · Yale · Knox</div></div></div>
+          <img class="about-photo" src="assets/headshot.jpg" alt="Lin Shi" />
+          <div class="about-copy">
+            <p>I am a senior sustainability scientist at Amazon Lab126. My work sits at the intersection of consumer technology, supply chains, life cycle assessment, and responsible AI.</p>
+            <p>I earned my PhD from Stanford’s Emmett Interdisciplinary Program in Environment and Resources. My background also includes environmental engineering, industrial ecology, and conservation fieldwork.</p>
+            <div class="facts">
+              <div class="fact"><strong>Based in</strong><span>Vancouver, Canada</span></div>
+              <div class="fact"><strong>Methods</strong><span>LCA, systems modeling, risk analysis</span></div>
+              <div class="fact"><strong>Domains</strong><span>AI, semiconductors, consumer technology</span></div>
+              <div class="fact"><strong>Education</strong><span>Stanford, Yale, Knox</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="contact">
-      <div class="shell contact-inner"><h2>Let’s build technology that works for people and the planet.</h2><a class="button" href="https://www.linkedin.com/in/linshi" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+      <div class="shell">
+        <h2>Research for technology that works within planetary limits.</h2>
+        <a href="https://www.linkedin.com/in/linshi" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+      </div>
     </section>
   </main>
 
-  <footer><div class="shell footer"><span>© <span id="year"></span> Lin Shi</span><span>Views expressed here are my own.</span></div></footer>
-  <script>
-    document.getElementById('year').textContent=new Date().getFullYear();
-    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-  </script>
+  <footer>
+    <div class="shell footer">
+      <span>© <span id="year"></span> Lin Shi</span>
+      <span>Views expressed here are my own.</span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
+
