@@ -1,18 +1,25 @@
-# Lin Shi personal website — redesign
+# Lin Shi — Digital Sustainability
 
-A lightweight static site designed for GitHub Pages. It retains visual cues from the former Squarespace site—green masthead, spacious typography, uppercase navigation, and editorial layouts—while updating the positioning around responsible AI, digital systems, life cycle assessment, and technology value chains.
+Static, mobile-friendly GitHub Pages site.
 
-## Publish
+## Image filenames
 
-1. Clone `https://github.com/linshigreenfire/linshigreenfire.github.io`.
-2. Back up the current files.
-3. Copy `index.html` and the `assets` folder from this package into the repository root.
-4. Preserve the repository's existing `CNAME` file if a custom domain is configured.
-5. Run `python3 -m http.server 8000` and open `http://localhost:8000` to preview.
-6. Commit and push to `main`.
+Place images in `assets/` using these names:
 
-## Before publishing
+- `headshot.jpg` — hero portrait
+- `responsible-ai.jpg` — Responsible AI research card
+- `digital-systems.jpg` — Digital systems research card
+- `technology-value-chains.jpg` — Technology value chains research card
+- `research.jpg` — wide research/presentation image
+- `fieldwork.jpg` — fieldwork image
+- `about.jpg` — About section portrait; falls back to `headshot.jpg`
 
-- Replace `assets/headshot.jpg` with a higher-resolution original portrait when available. The included image is cropped from the supplied screenshot.
-- Confirm your preferred title, biography, and LinkedIn URL.
-- Add a CV PDF if desired, then link it from the hero navigation.
+Optional images automatically disappear when their files are absent, so the layout remains clean.
+
+## Preview locally
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open `http://localhost:8000`.
